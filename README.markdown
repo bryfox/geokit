@@ -131,6 +131,10 @@ creates a template with these settings and places it in `config/initializers/geo
 * IP Geocoder - geocodes an IP address using hostip.info's web service.
 * Geoplugin.net -- another IP address geocoder
 
+### Yahoo Geocoder notes
+
+Sometime around 26 Sep 2012, Yahoo! announced their [BOSS Geo service](http://www.ysearchblog.com/2012/09/26/boss-geo/) and silently released 2.0 of the Placefinder API with breaking changes. This code currently supports the basic changes from Placefinder v2.0. I have not updated any of the tests, since the Placefinder service will be discontinued on 17 Nov in favor of BOSS, which is a more drastic change.
+
 ### Google Geocoder Tricks
 
 The Google Geocoder sports a number of useful tricks that elevate it a little bit above the rest of the currently supported geocoders. For starters, it returns a `suggested_bounds` property for all your geocoded results, so you can more easily decide where and how to center a map on the places you geocode. Here's a quick example:
